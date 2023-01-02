@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Triend API</title>
+    <link rel="stylesheet" href="./css/styles.css">
+	<script src="https://cdn.tailwindcss.com"></script>
+
+  </head>
+  <body>
+
+		<div id="triend-box" class="grid grid-cols-3 gap-6 mx-auto w-5/6 py-16 ">
+			<div class="triend-review relative">
+				<div class="test-bg h-96">
+					<img class="h-full w-full object-cover	" src="./imgs/test1.jpg">
+					<h2>Example One</h2>
+				</div>
+			</div>
+			<div class="triend-review relative"> 
+				<div class="test-bg h-96">
+					<img class="h-full w-full object-cover	" src="./imgs/test2.jpg">
+					<h2>Example Two</h2>
+				</div>
+
+			</div>
+			<div class="triend-review relative">
+				<div class="test-bg h-96">
+					<img class="h-full w-full object-cover	" src="./imgs/test3.jpg">
+					<h2>Example Three</h2>
+				</div>
+
+			</div>
+		</div>
+
+
+	<!--can make absolute here-->	<div class="">
+		<section class="relative">
+  			
+			<!-- HTML Chart -->
+			<div class="chart absolute bg-black rounded-full" data-percent="75">
+			  <figcaption class="text-white font-semibold	">75</figcaption>
+			  <div class="html" src=""></div>
+			  <svg width="200" height="200">
+				<circle class="outer" cx="95" cy="95" r="85" transform="rotate(90, 95, 95)"/>
+			  </svg>
+			</div>
+			
+			<!-- CSS Chart -->
+			<div class="chart absolute" data-percent="75">
+			  <div class="css" src=""></div>
+			  <svg width="200" height="200">
+				<circle class="outer" cx="95" cy="95" r="75" transform="rotate(90, 95, 95)"/>
+			  </svg>
+			</div>
+			
+			
+			<!-- Javascript Chart -->
+			<div class="chart absolute" data-percent="75">
+			  <div class="javascript" src=""></div>
+			  <svg width="200" height="200">
+				<circle class="outer" cx="95" cy="95" r="65" transform="rotate(90, 95, 95)"/>
+			  </svg>
+			</div>
+			
+	
+		  </section>
+		</div>
+
+	  </body>
+
+
+
+
+	<script
+  src="https://code.jquery.com/jquery-3.6.3.js"
+  integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+  crossorigin="anonymous"></script>
+	<script src="./js/first.js"></script>
+  </body>
+</html>
