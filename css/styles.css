@@ -134,7 +134,6 @@ body {
   fill: transparent;
   stroke: #333;
   stroke-width: 10;
-  stroke-dasharray: 534;
   transition: stroke-dashoffset 1s;
   -webkit-animation-play-state: running;
   
@@ -153,16 +152,35 @@ body {
   animation: show100 2s;
 }
 
+/* Set the initial values for the animation */
+.chart[data-percent-mid='100'] .outer {
+  stroke-dashoffset: 0;
+  -webkit-animation: show100mid 2s;
+  animation: show100mid 2s;
+}
+
 .chart[data-percent='75'] .outer {
-  stroke-dashoffset: 133;
+  stroke-dashoffset: 134;
   -webkit-animation: show75 2s;
   animation: show75 2s;
+}
+
+.chart[data-percent-mid='75'] .outer {
+  stroke-dashoffset: 117;
+  -webkit-animation: show75mid 2s;
+  animation: show75mid 2s;
 }
 
 .chart[data-percent='50'] .outer {
   stroke-dashoffset: 267;
   -webkit-animation: show50 2s;
   animation: show50 2s;
+}
+
+.chart[data-percent-mid='50'] .outer {
+  stroke-dashoffset: 235;
+  -webkit-animation: show50mid 2s;
+  animation: show50mid 2s;
 }
 
 .chart[data-percent='25'] .outer {
@@ -193,6 +211,26 @@ body {
   }
 }
 
+@-webkit-keyframes show100mid {
+  from {
+    stroke-dashoffset: 470;
+  }
+  
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes show100mid {
+  from {
+    stroke-dashoffset: 470;
+  }
+  
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 @-webkit-keyframes show75 {
   from {
     stroke-dashoffset: 537;
@@ -209,7 +247,27 @@ body {
   }
   
   to {
-    stroke-dashoffset: 124;
+    stroke-dashoffset: 134;
+  }
+}
+
+@-webkit-keyframes show75mid {
+  from {
+    stroke-dashoffset: 470;
+  }
+  
+  to {
+    stroke-dashoffset: 117;
+  }
+}
+
+@keyframes show75mid {
+  from {
+    stroke-dashoffset: 470;
+  }
+  
+  to {
+    stroke-dashoffset: 117;
   }
 }
 
@@ -233,6 +291,26 @@ body {
   }
 }
 
+@-webkit-keyframes show50mid {
+  from {
+    stroke-dashoffset: 470;
+  }
+  
+  to {
+    stroke-dashoffset: 235;
+  }
+}
+
+@keyframes show50mid {
+  from {
+    stroke-dashoffset: 537;
+  }
+  
+  to {
+    stroke-dashoffset: 235;
+  }
+}
+
 @-webkit-keyframes show25 {
   from {
     stroke-dashoffset: 537;
@@ -252,7 +330,13 @@ body {
     stroke-dashoffset: 401;
   }
 }
+/* END Keyframes for the initial animation *
+
+
+/* END Circle colors and graphic positions */
+
 /* END Keyframes for the initial animation */
+
 
 *, ::after, ::before {
   box-sizing: content-box !important;
