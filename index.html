@@ -39,39 +39,39 @@
 		<section class="relative">
   			
 			<!-- HTML Chart -->
-			<!-- <input  type="button" value="Total"  onclick="TotalLength()"/>-->
+			<input  type="button" value="Total Cyan"  onclick="TotalLengthCyan()"/>
+			<input  type="button" value="Total Pink"  onclick="TotalLengthPink()"/>
+			<input  type="button" value="Total Yellow"  onclick="TotalLengthYellow()"/>
 
-			<div class="chart absolute bg-black rounded-full" data-percent="75">
+
+			<div class="chart absolute bg-black rounded-full" data-percent="0">
 			  <figcaption class="text-white font-semibold">75</figcaption>
 			  <div class="html" src=""></div>
 			  <svg width="200" height="200">
-				<circle class="outer" cx="95" cy="95" r="85" stroke-dasharray="534" transform="rotate(90, 95, 95)"/>
+				<circle id="circle-1" 
+				class="outer" 
+				cx="95" cy="95" r="85" 
+				stroke-dasharray="537"
+				transform="rotate(90, 95, 95)"/>
 			  </svg>
 			</div>
 			
 			<!-- CSS Chart -->
-			<div class="chart absolute" data-percent-mid="50">
+			<div class="chart absolute" data-percent-mid="0">
 			  <div class="css" src=""></div>
 			  <svg width="200" height="200">
-				<circle class="outer" cx="95" cy="95" r="75" stroke-dasharray="470" transform="rotate(90, 95, 95)"/>
+				<circle id="circle-2" class="outer" cx="95" cy="95" r="75" stroke-dasharray="470" transform="rotate(90, 95, 95)"/>
 			  </svg>
 			</div>
 
-		<!--	<script>
-				function TotalLength(){
-				   var path = document.querySelector('#circle1');
-				   var len = (path.getTotalLength() );
-				   alert("Path length - " + len);
-				   };
-				
-			   </script>-->
+	        <script src="js/dynamic-strokes.js"></script>
 			
 			
 			<!-- Javascript Chart -->
-			<div class="chart absolute" data-percent="75">
+			<div class="chart absolute" data-percent="0">
 			  <div class="javascript" src=""></div>
 			  <svg width="200" height="200">
-				<circle id="circle1" class="outer" cx="95" cy="95" r="65" stroke-dasharray="407" transform="rotate(90, 95, 95)"/>
+				<circle id="circle-3" class="outer" cx="95" cy="95" r="65" stroke-dasharray="407" transform="rotate(90, 95, 95)"/>
 			  </svg>
 			</div>
 			
