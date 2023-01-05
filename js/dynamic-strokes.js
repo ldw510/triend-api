@@ -1,34 +1,24 @@
-function TotalLengthCyan(){
+window.onload =  function TotalLengthCyan(){
   var path = document.querySelector('#circle-1');
+  var pathmid = document.querySelector('#circle-2');
+  var pathinner = document.querySelector('#circle-3');
   var len = (path.getTotalLength() );
-  var percent = 0.8; //here is the percentage that the circle is filled
-  var gap = 0.2; //here is the gap 
+  var lenmid = (pathmid.getTotalLength() );
+  var leninner = (pathinner.getTotalLength() );
+
+  var gap = 0.2; //here is the gap (the missing % from the score)
   var gaplen = len * gap;
-//  alert("Path total length - " + len + "stoke length filled - " + strokelen + "stroke gap - " + gaplen);
   path.style.strokeDasharray = len;
   path.style.strokeDashoffset = gaplen; 
+
+  var gapmid = 0.6;
+  var gapmidlen = lenmid * gapmid
+  pathmid.style.strokeDasharray = lenmid;
+  pathmid.style.strokeDashoffset = gapmidlen; 
+
+  var gapinner = 0.25
+  var gapinnerlen = leninner * gapinner
+  pathinner.style.strokeDasharray = leninner;
+  pathinner.style.strokeDashoffset = gapinnerlen; 
   };
 
-  function TotalLengthPink(){
-    var path = document.querySelector('#circle-2');
-    var len = (path.getTotalLength() );
-    var percent = 0.4; //here is the percentage that the circle is filled
-    var gap = 0.6; //here is the gap 
-    var gaplen = len * gap;
-//    alert("Path total length - " + len + "stoke length filled - " + strokelen + "stroke gap - " + gaplen);
-    path.style.strokeDasharray = len;
-    path.style.strokeDashoffset = gaplen; 
-    };
-  
-    function TotalLengthYellow(){
-      var path = document.querySelector('#circle-3');
-      var len = (path.getTotalLength() );
-      var percent = 0.75; //here is the percentage that the circle is filled
-      var gap = 0.25; //here is the gap 
-      var gaplen = len * gap;
-  //    alert("Path total length - " + len + "stoke length filled - " + strokelen + "stroke gap - " + gaplen);
-      path.style.strokeDasharray = len;
-      path.style.strokeDashoffset = gaplen; 
-      };
-    
-    

@@ -36,13 +36,7 @@
 
 
 	<!--can make absolute here-->	<div class="">
-		<section class="relative">
-  			
-			<!-- HTML Chart -->
-			<input  type="button" value="Total Cyan"  onclick="TotalLengthCyan()"/>
-			<input  type="button" value="Total Pink"  onclick="TotalLengthPink()"/>
-			<input  type="button" value="Total Yellow"  onclick="TotalLengthYellow()"/>
-
+		<section class="circle-contain relative">
 
 			<div class="chart absolute bg-black rounded-full" data-percent="0">
 			  <figcaption class="text-white font-semibold">75</figcaption>
@@ -51,7 +45,7 @@
 				<circle id="circle-1" 
 				class="outer" 
 				cx="95" cy="95" r="85" 
-				stroke-dasharray="537"
+				stroke-dashoffset="537"
 				transform="rotate(90, 95, 95)"/>
 			  </svg>
 			</div>
@@ -60,24 +54,33 @@
 			<div class="chart absolute" data-percent-mid="0">
 			  <div class="css" src=""></div>
 			  <svg width="200" height="200">
-				<circle id="circle-2" class="outer" cx="95" cy="95" r="75" stroke-dasharray="470" transform="rotate(90, 95, 95)"/>
+				<circle id="circle-2" class="outer" cx="95" cy="95" r="75" 
+				stroke-dashoffset="470"
+				transform="rotate(90, 95, 95)"/>
 			  </svg>
-			</div>
-
-	        <script src="js/dynamic-strokes.js"></script>
-			
+			</div>			
 			
 			<!-- Javascript Chart -->
 			<div class="chart absolute" data-percent="0">
 			  <div class="javascript" src=""></div>
 			  <svg width="200" height="200">
-				<circle id="circle-3" class="outer" cx="95" cy="95" r="65" stroke-dasharray="407" transform="rotate(90, 95, 95)"/>
+				<circle id="circle-3" class="outer" cx="95" cy="95" r="65" 
+				stroke-dashoffset="407"
+				transform="rotate(90, 95, 95)"/>
 			  </svg>
 			</div>
+
+			<div class="triend-arrow">
+				<img class="bg-none" src="./imgs/triend-arrow.svg"/>
+			</div>
+			
 			
 	
 		  </section>
 		</div>
+
+		<script src="js/dynamic-strokes.js"></script>
+
 
 	  </body>
 
